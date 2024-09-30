@@ -14,16 +14,18 @@ function App() {
   },[])
   return (
     <div>
-      <h1>Store api</h1>
+      <h1>API Store</h1>
+      <div style={{display:"flex",flexWrap:"wrap",marginLeft:"6rem"}}>
       {products.map((product,index)=>{
         return(
-          <div key={index}>
-            <img src={product.image} style={{width:"10rem"}}/>
-            <h6>{product.title}</h6>
-            <p>{product.price}</p>
+          <div key={index} style={{border:"1px solid skyblue",padding:"1rem",margin:"1rem",width:"15rem"}}>
+            <img src={product.image} style={{width:"10rem",marginLeft:"2rem"}}/>
+            <h5>{product.title}</h5>
+            <p>${product.price}</p>
           </div>
         )
       })}
+    </div>
     </div>
   )
 }
